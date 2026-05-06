@@ -1,7 +1,17 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Smart Agri-Mesh"
+excerpt: "Hệ thống IoT giám sát và tưới tiêu nông nghiệp tự động ứng dụng AI"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+## Mô tả
+
+Dự án mạng lưới IoT giám sát và tự động hóa nông nghiệp thông minh. Hệ thống sử dụng kết hợp vi điều khiển STM32 và ESP32 để liên tục thu thập dữ liệu về độ ẩm và nhiệt độ đất. Điểm nổi bật của dự án là việc tích hợp thuật toán AI để phân tích dữ liệu môi trường, từ đó đưa ra quyết định tưới tiêu hoàn toàn tự động và tối ưu hóa tài nguyên nước.
+
+## Công nghệ
+
+STM32, ESP32, C/C++, Edge AI, IoT, Git/GitHub
+
+## Link
+
+[GitHub Repository](https://github.com/Hieuto0409/Smart-Agri-Mesh.git)

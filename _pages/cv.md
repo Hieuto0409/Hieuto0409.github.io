@@ -3,62 +3,26 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+## Học vấn
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+**Học viện Công nghệ Bưu chính Viễn thông (PTITHCM)**
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+- Ngành: IoT
+- Thời gian: 2023 - nay
+- GPA: [2.8/ 4.0]
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Kỹ năng kỹ thuật
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+| Kỹ năng               | Mức độ     | Chi tiết                                             |
+| --------------------- | ---------- | ---------------------------------------------------- |
+| Vi điều khiển & Nhúng | Khá        | ESP32, STM32, Cảm biến                               |
+| Trí tuệ nhân tạo (AI) | Khá        | Edge AI, TinyML, huấn luyện mô hình qua Edge Impulse |
+| Lập trình & Công cụ   | Trung bình | C/C++, HTML/CSS, Git/GitHub, VSCode                  |
+| Thiết kế Cơ khí 3D    | Trung bình | Thiết kế part, lắp ráp (assembly) với SolidWorks     |
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Dự án nổi bật
+
+- **E-Nanny (Smart Baby Monitor):** Hệ thống giám sát trẻ em thông minh ứng dụng Edge AI trên board ESP32-S3. Tích hợp microphone và mô hình TinyML để nhận diện tiếng khóc theo thời gian thực với độ trễ thấp.
+- **Smart Agri-Mesh:** Dự án IoT giám sát nông nghiệp tự động. Giao tiếp vi điều khiển STM32 và ESP32 để thu thập dữ liệu độ ẩm, nhiệt độ đất, tích hợp AI tối ưu hóa quyết định tưới tiêu.
