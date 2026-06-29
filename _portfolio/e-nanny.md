@@ -20,9 +20,11 @@ Vai trò của tôi là chịu trách nhiệm chính cho phân hệ học máy v
 
 # Ảnh sản phẩm
 
-[Hình ảnh dự án](/images/anhDemoSanPham_MatTren.jpg)
-[Hình ảnh dự án](/images/anhDemoSanPham_MatPhai.jpg)
-[Hình ảnh dự án](/images/anhDemoSanPham_MatChinhGiua.jpg)
+![E-Nanny mặt trên](/images/anhDemoSanPham_MatTren.jpg)
+
+![E-Nanny mặt phải](/images/anhDemoSanPham_MatPhai.jpg)
+
+![E-Nanny mặt chính giữa](/images/anhDemoSanPham_MatChinhGiua.jpg)
 
 # Video demo
 
