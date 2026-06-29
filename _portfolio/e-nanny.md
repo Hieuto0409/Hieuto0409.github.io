@@ -14,6 +14,22 @@ E-Nanny là dự án hệ thống giám sát trẻ em thông minh ứng dụng c
 
 ESP32-S3, C/C++, Edge AI, TinyML, Edge Impulse
 
+## Vai trò
+
+Vai trò của tôi là chịu trách nhiệm chính cho phân hệ học máy và xử lý tại biên (Edge AI). Cụ thể, công việc của tôi bao gồm thu thập tập dữ liệu âm thanh, huấn luyện mô hình AI nhận diện tiếng khóc trên nền tảng Edge Impulse. Đồng thời, tôi tiến hành tích hợp mô hình TinyML và trực tiếp lập trình firmware cho vi điều khiển STM32F401 để thiết bị có thể tự động phân tích âm thanh và ra quyết định xử lý ngay tại phần cứng.
+
+# Ảnh sản phẩm
+
+[Hình ảnh dự án](/images/anhDemoSanPham_MatTren.jpg)
+[Hình ảnh dự án](/images/anhDemoSanPham_MatPhai.jpg)
+[Hình ảnh dự án](/images/anhDemoSanPham_MatChinhGiua.jpg)
+
+# Video demo
+
+<video controls width="100%">
+  <source src="/images/VideoDemo.mp4" type="video/mp4">
+</video>
+
 ## Link
 
 [GitHub Repository](https://github.com/Hieuto0409/E-NANNY-AI)

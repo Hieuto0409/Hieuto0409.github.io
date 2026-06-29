@@ -12,6 +12,16 @@ Dự án mạng lưới IoT giám sát và tự động hóa nông nghiệp thô
 
 STM32, ESP32, C/C++, Edge AI, IoT, Git/GitHub
 
+## Vai trò
+
+Là người phát triển độc lập toàn bộ dự án, tôi đã đảm nhiệm mọi việc: từ việc thiết kế kiến trúc hệ thống, cấu hình các chuẩn giao tiếp phần cứng  giữa các vi điều khiển để đảm bảo luồng dữ liệu ổn định, cho đến việc lập trình hoàn thiện mã nguồn cho bảng điều khiển quản lý tưới tiêu.
+
+# Video demo
+
+<video controls width="100%">
+  <source src="/images/Project Video.mp4" type="video/mp4">
+</video>
+
 ## Link
 
 [GitHub Repository](https://github.com/Hieuto0409/Smart-Agri-Mesh.git)
