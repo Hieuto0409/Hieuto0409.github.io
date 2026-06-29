@@ -31,7 +31,7 @@ author:
   location: "Ho Chi Minh city"
   employer: "Posts and Telecommunications Institute of Technology"
   uri: # URL
-  email: "toquanghieubmt123@gmail.com"
+  toquanghieubmt123@gmail.com: "toquanghieubmt123@gmail.com"
 
   # Academic websites
   academia: # URL
@@ -51,14 +51,14 @@ author:
   bitbucket: # Username - Update with your username on the site
   codepen: # Username
   dribbble: # Username
-  github: "https://github.com/Hieuto0409"
+  github: "Hieuto0409"
   kaggle: "toquanghieu"
   stackoverflow: # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
   artstation: # Username
   bluesky: # Replace this with you Bluesky username
-  facebook: "https://www.facebook.com/profile.php?id=100082642095378"
+  facebook: "https://www.facebook.com/toquanghieu0409"
   flickr: # Username
   foursquare: # Username
   goodreads: # Username
@@ -138,7 +138,7 @@ yandex_site_verification:
 twitter:
   username: &twitter
 facebook:
-  username:
+  username: "toquanghieu0409"
   app_id:
   publisher:
 og_image: # Social media default site image

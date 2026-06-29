@@ -19,7 +19,7 @@ author_profile: true
 | --------------------- | ------ | ---------------------------------------------------- |
 | Vi điều khiển & Nhúng | Khá    | ESP32, STM32, Cảm biến                               |
 | Trí tuệ nhân tạo (AI) | Khá    | Edge AI, TinyML, huấn luyện mô hình qua Edge Impulse |
-| Lập trình & Công cụ   | Khá    | C/C++, HTML/CSS, Git/GitHub, VSCode                  |
+| Lập trình & Công cụ   | Khá    | C/C++, python, HTML/CSS, Git/GitHub, VSCode          |
 | Thiết kế Cơ khí 3D    | Khá    | Thiết kế part, lắp ráp (assembly) với SolidWorks     |
 
 ## Dự án nổi bật
