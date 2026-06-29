@@ -27,4 +27,5 @@ Tôi thích tự tay mày mò các linh kiện phần cứng, thiết kế các 
 ### 2. Smart Agri-Mesh
 
 Đây là đồ án cá nhân nhằm thiết kế và triển khai một hệ thống nông nghiệp thông minh ứng dụng công nghệ mạng lưới. Mục tiêu của dự án là thu thập dữ liệu môi trường canh tác và tự động hóa quy trình tưới tiêu, cho phép giám sát và điều khiển trực quan qua giao diện người dùng. Hệ thống được xây dựng dựa trên các nền tảng vi điều khiển như STM32 và ESP32.Là người phát triển độc lập toàn bộ dự án, tôi đã đảm nhiệm mọi việc: từ việc thiết kế kiến trúc hệ thống, cấu hình các chuẩn giao tiếp phần cứng  giữa các vi điều khiển để đảm bảo luồng dữ liệu ổn định, cho đến việc lập trình hoàn thiện mã nguồn cho bảng điều khiển quản lý tưới tiêu.
+
 [Xem trên GitHub](https://github.com/Hieuto0409)
