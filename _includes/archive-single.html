@@ -18,32 +18,32 @@
 <div class="{{ include.type | default: "list" }}__item portfolio__item">
   <article class="archive__item portfolio-card" itemscope itemtype="http://schema.org/CreativeWork">
       <a class="portfolio-card__media" href="{{ base_path }}{{ post.url }}" rel="permalink" aria-label="{{ title }}">
-        <div class="archive__item-teaser">
-          {% if teaser %}
-            <img src=
-              {% if teaser contains "://" %}
-                "{{ teaser }}"
-              {% else %}
-                "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-              {% endif %}
-              alt="">
-          {% endif %}
+  <div class="archive__item-teaser">
+    {% if teaser %}
+      <img src=
+        {% if teaser contains "://" %}
+          "{{ teaser }}"
+        {% else %}
+          "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+        {% endif %}
+        alt="">
+    {% endif %}
 
-          {% comment %} If a demo video exists, show a small overlay video if an image is present,
-             otherwise show the video full-width (fallback when there's no image). {% endcomment %}
-          {% if post.demo_video %}
-            {% if teaser %}
-              <div class="portfolio-card__video-overlay">
-                <video src="{{ post.demo_video }}" controls muted preload="none"></video>
-              </div>
-            {% else %}
-              <video class="portfolio-card__video-full" src="{{ post.demo_video }}" controls muted preload="none"></video>
-            {% endif %}
-          {% endif %}
+    {% comment %} If a demo video exists, show a small overlay video if an image is present,
+       otherwise show the video full-width (fallback when there's no image). {% endcomment %}
+    {% if post.demo_video %}
+      {% if teaser %}
+        <div class="portfolio-card__video-overlay">
+          <video src="{{ post.demo_video }}" controls muted preload="none"></video>
         </div>
+      {% else %}
+        <video class="portfolio-card__video-full" src="{{ post.demo_video }}" controls muted preload="none"></video>
+      {% endif %}
+    {% endif %}
+  </div>
 
-        <div class="portfolio-card__eyebrow portfolio-card__eyebrow--overlay">Dự án nổi bật</div>
-      </a>
+  <div class="portfolio-card__eyebrow portfolio-card__eyebrow--overlay">Dự án nổi bật</div>
+</a>
 
     <div class="portfolio-card__body">
       <div class="portfolio-card__eyebrow">{{ post.collection | capitalize }}</div>

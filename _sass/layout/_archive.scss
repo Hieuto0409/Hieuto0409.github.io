@@ -99,14 +99,7 @@
   box-shadow: 0 12px 30px rgba(#000, 0.04);
 }
 
-.portfolio-card__media {
-  display: block;
-}
-
-/* allow overlay elements inside media */
-.portfolio-card__media {
-  position: relative;
-}
+.portfolio-card__media { position: relative; }
 
 .portfolio-card__media .archive__item-teaser {
   height: 100%;
@@ -144,18 +137,9 @@
   overflow: hidden;
 }
 
-.portfolio-card__video-overlay video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+.portfolio-card__video-overlay video { width: 100%; height: auto; display: block; }
 
-.portfolio-card__video-full {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: $border-radius;
-}
+.portfolio-card__video-full { width: 100%; height: auto; display: block; border-radius: $border-radius; }
 
 .portfolio-card__body {
   min-width: 0;
@@ -178,9 +162,7 @@
    (this removes the label under the image). If you want an overlay
    label instead, add a `.portfolio-card__eyebrow--overlay` inside
    `.portfolio-card__media` and style it as absolute. */
-.portfolio-card__body .portfolio-card__eyebrow {
-  display: none;
-}
+.portfolio-card__body .portfolio-card__eyebrow { display: none; }
 
 .portfolio-card__chips {
   display: flex;
