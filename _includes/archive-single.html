@@ -14,7 +14,13 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if post.collection == 'Dự Án Nổi Bật' %}
+{% assign is_portfolio_card = false %}
+{% if post.collection == 'portfolio' or post.collection == 'Dự Án Nổi Bật' %}
+  {% assign is_portfolio_card = true %}
+{% endif %}
+{% assign portfolio_demo = post.demo_video | default: post.demo_url %}
+
+{% if is_portfolio_card %}
 <div class="{{ include.type | default: "list" }}__item portfolio__item">
   <article class="archive__item portfolio-card" itemscope itemtype="http://schema.org/CreativeWork">
       <a class="portfolio-card__media" href="{{ base_path }}{{ post.url }}" rel="permalink" aria-label="{{ title }}">
@@ -31,13 +37,13 @@
 
     {% comment %} If a demo video exists, show a small overlay video if an image is present,
        otherwise show the video full-width (fallback when there's no image). {% endcomment %}
-    {% if post.demo_video %}
+    {% if portfolio_demo %}
       {% if teaser %}
         <div class="portfolio-card__video-overlay">
-          <video src="{{ post.demo_video }}" controls muted preload="none"></video>
+          <video src="{{ portfolio_demo }}" controls muted preload="metadata" playsinline></video>
         </div>
       {% else %}
-        <video class="portfolio-card__video-full" src="{{ post.demo_video }}" controls muted preload="none"></video>
+        <video class="portfolio-card__video-full" src="{{ portfolio_demo }}" controls muted preload="metadata" playsinline></video>
       {% endif %}
     {% endif %}
   </div>
@@ -88,8 +94,8 @@
       {% endif %}
 
       <div class="portfolio-card__actions">
-        {% if post.demo_url %}
-          <a class="btn btn--primary" href="{{ post.demo_url }}" target="_blank" rel="noopener">Xem demo</a>
+        {% if portfolio_demo %}
+          <a class="btn btn--primary" href="{{ portfolio_demo }}" target="_blank" rel="noopener">Xem demo</a>
         {% endif %}
         {% if post.link %}
           <a class="btn" href="{{ post.link }}" target="_blank" rel="noopener">Mở link</a>
