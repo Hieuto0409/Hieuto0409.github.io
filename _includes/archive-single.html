@@ -15,7 +15,8 @@
 {% endif %}
 
 {% if post.collection == 'Dự Án Nổi Bật' %}
-<!-- <div class="{{ include.type | default: "list" }}__item portfolio__item">
+{% comment %}
+<div class="{{ include.type | default: "list" }}__item portfolio__item">
   <article class="archive__item portfolio-card" itemscope itemtype="http://schema.org/CreativeWork">
       <a class="portfolio-card__media" href="{{ base_path }}{{ post.url }}" rel="permalink" aria-label="{{ title }}">
         <div class="archive__item-teaser">
@@ -99,6 +100,7 @@
     </div>
   </article>
 </div>
+{% endcomment %}
 {% else %}
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
