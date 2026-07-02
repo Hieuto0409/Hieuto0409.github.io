@@ -47,6 +47,15 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
+        {% if page.collection == 'portfolio' %}
+          {% if page.demo_url or page.repo_url %}
+          <div class="portfolio-card__actions">
+            {% if page.demo_url %}<a class="btn btn--primary" href="{{ page.demo_url }}" target="_blank" rel="noopener">Xem demo</a>{% endif %}
+            {% if page.repo_url %}<a class="btn" href="{{ page.repo_url }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+          </div>
+          {% endif %}
+        {% endif %}
+
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
