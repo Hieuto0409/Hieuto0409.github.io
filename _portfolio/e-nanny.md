@@ -1,9 +1,9 @@
 ---
 title: "E-Nanny (Smart Baby Monitor)"
-excerpt: "He thong giam sat va bao khoc thong minh ung dung Edge AI tren ESP32-S3."
+excerpt: "Hệ Thống giám sát và báo khóc em bé thông minh ứng dụng Edge AI trên ESP32-S3."
 collection: portfolio
 header:
-  teaser: anhDemoSanPham_MatChinhGiua.jpg
+  teaser: anhDemoSanPham_MatTren.jpg
 demo_url: /images/VideoDemo.mp4
 repo_url: https://github.com/Hieuto0409/E-NANNY-AI
 stack:

@@ -1,9 +1,9 @@
 ---
 title: "Smart Agri-Mesh"
-excerpt: "He thong IoT giam sat va tuoi tieu nong nghiep tu dong ung dung AI."
+excerpt: "Hệ thống IoT giám sát và tưới tiêu nông nghiệp tự động ứng dụng AI."
 collection: portfolio
 header:
-  teaser: 500x300.png
+  teaser: None
 demo_url: /images/Project%20Video.mp4
 repo_url: https://github.com/Hieuto0409/Smart-Agri-Mesh
 stack:

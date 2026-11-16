@@ -1,8 +1,8 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
+{% if post.header.teaser and post.header.teaser != "None" %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% elsif post.preview_image %}
+{% elsif post.preview_image and post.preview_image != "None" %}
   {% capture teaser %}{{ post.preview_image }}{% endcapture %}
 {% else %}
   {% assign teaser = nil %}
