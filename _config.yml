@@ -24,7 +24,7 @@ repository: "Hieuto0409.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar: "profile.png"
+  avatar: "profile.jpg"
   name: "To Quang Hieu"
   pronouns: # example: "she/her"
   bio: "IoT & Edge AI Enthusiast. Building smart systems with ESP32, STM32, and TinyML"
