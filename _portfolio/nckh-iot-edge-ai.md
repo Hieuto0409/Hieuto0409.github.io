@@ -18,14 +18,15 @@ stack:
 
 ## Mô tả
 
-Đề tài Nghiên cứu Khoa học Sinh viên (năm học 2025–2026, mã số **28-SV-2026-VT2** tại Học viện Công nghệ Bưu chính Viễn thông – Cơ sở TP.HCM): *"Thiết kế và thi công hệ thống IoT hỗ trợ sàng lọc không xâm lấn cảnh báo nguy cơ các bệnh liên quan đến tim và hô hấp dựa trên phân tích tín hiệu PPG và công nghệ Edge AI"*.
+Đề tài Nghiên cứu Khoa học Sinh viên: _"Thiết kế và thi công hệ thống IoT hỗ trợ sàng lọc không xâm lấn cảnh báo nguy cơ các bệnh liên quan đến tim và hô hấp dựa trên phân tích tín hiệu PPG và công nghệ Edge AI"_.
 
 Hệ thống tích hợp cảm biến quang học **MAX30102** (thu tín hiệu ánh sáng đỏ và hồng ngoại RED/IR ở đầu ngón tay ở tần số 200 Hz) cùng cảm biến điện tâm đồ một kênh **AD8232** (thu tín hiệu ECG ở tần số 500 Hz), xử lý thời gian thực ngay tại biên trên vi điều khiển **ESP32-S3**, hiển thị trực tiếp qua màn hình cảm ứng **TJC** và đồng bộ dữ liệu phiên đo (60 giây) lên nền tảng đám mây **ThingsBoard** qua giao thức HTTPS.
 
-Điểm nổi bật của dự án là việc kết hợp chuỗi xử lý tín hiệu số – kiểm tra chất lượng tín hiệu (**DSP/SQI**) với các mô hình học máy tại biên (**Edge AI**) trên các đặc trưng biến thiên khoảng nhịp sinh lý (**HRV/PRV**) để tính toán nhịp tim (HR), nhịp mạch (PR), nồng độ bão hòa oxy trong máu ($\text{SpO}_2$) và hỗ trợ sàng lọc, cảnh báo 4 trạng thái:
+Điểm nổi bật của dự án là việc kết hợp chuỗi xử lý tín hiệu số – kiểm tra chất lượng tín hiệu (**DSP/SQI**) với các mô hình học máy tại biên (**Edge AI**) trên các đặc trưng biến thiên khoảng nhịp sinh lý (**HRV/PRV**) để tính toán nhịp tim (HR), nhịp mạch (PR), nồng độ bão hòa oxy trong máu SpO2 và hỗ trợ sàng lọc, cảnh báo 4 trạng thái:
+
 - **Căng thẳng tâm lý cấp tính (Stress)** từ biến thiên khoảng mạch PPG.
 - **Rối loạn nhịp / Nghi ngờ rung nhĩ (AF / non-AF)** từ biến thiên khoảng RR trên tín hiệu ECG.
-- **Cảnh báo nồng độ oxy trong máu thấp ($\text{SpO}_2$ thấp)** dựa trên tỷ số quang học AC/DC và cổng kiểm tra chất lượng tín hiệu.
+- **Cảnh báo nồng độ oxy trong máu thấp (SPO2 thấp)** dựa trên tỷ số quang học AC/DC và cổng kiểm tra chất lượng tín hiệu.
 - **Bình thường (Không phát hiện cảnh báo)** khi tất cả các nhánh đo đều đạt chuẩn chất lượng tín hiệu và âm tính, hoặc **Yêu cầu đo lại** khi phát hiện nhiễu chuyển động, mất tiếp xúc hay tín hiệu không đủ độ tin cậy.
 
 ## Công nghệ
@@ -50,10 +51,6 @@ Trong dự án, tôi chịu trách nhiệm chính về **nghiên cứu cơ sở 
    - Nghiên cứu đặc điểm rối loạn nhịp thất bất quy tắc trên chuỗi khoảng đỉnh R (RR intervals) và xử lý dữ liệu từ bộ cơ sở dữ liệu chuẩn **MIT-BIH AFDB** với các cửa sổ ECG 30 giây.
    - Xây dựng bộ **9 đặc trưng thống kê khoảng nhịp RR** (`mean_rr`, `median_rr`, `sdnn`, `rmssd`, `pnn50`, `cv_rr`, `iqr_rr`, `min_rr`, `max_rr`) kết hợp các ngưỡng cổng kiểm tra độ tin cậy runtime (coverage, tỷ lệ RR ngắn, khoảng trống tối đa, tỷ lệ search-back).
    - Huấn luyện mô hình mạng nơ-ron truyền thẳng nhiều lớp (**MLP**) trên nền tảng **Edge Impulse** và thực hiện **lượng tử hóa INT8 (Quantization)** để tối ưu bộ nhớ và tốc độ xử lý tại biên. Mô hình INT8 đạt **Accuracy 98,1%** (Loss 0,05, AUC 0,98) trên tập Internal Validation và **Accuracy 92,72%** (F1-score 0,95, AUC 0,96) trên 6.912 cửa sổ kiểm thử ngoại tuyến.
-
-3. **Nghiên cứu đánh giá chất lượng tín hiệu (DSP/SQI), chuyển miền dữ liệu và phân tích thực nghiệm:**
-   - Khảo sát các dạng nhiễu đặc trưng trên PPG và ECG, tham gia xây dựng quy trình đánh giá chất lượng tín hiệu ngoại tuyến trên 12.871 cửa sổ đồng bộ ECG–PPG (đạt 85,56% cửa sổ hợp lệ đồng thời) và quy tắc sàng lọc nồng độ oxy máu thấp ($\text{SpO}_2$).
-   - Phân tích vấn đề chuyển miền dữ liệu (domain shift) giữa dữ liệu công khai và cảm biến thực tế; tổng hợp và đánh giá thống kê kết quả thực nghiệm (60 lượt đo thực tế) đối chiếu với thiết bị y tế thương mại **OMRON Complete HEM-7530T** và **JUMPER JPD-500D** ($\text{MAE SpO}_2 = 0,86\%$, $\text{MAE nhịp mạch} = 4,41\text{--}5,32\text{ BPM}$, độ đồng thuận âm tính nhánh AF đạt $81,58\%$).
 
 # Video demo
 
